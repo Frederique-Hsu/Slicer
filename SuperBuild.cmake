@@ -205,6 +205,7 @@ Slicer_Remote_Add(vtkAddon
   )
 list_conditional_append(Slicer_BUILD_vtkAddon Slicer_REMOTE_DEPENDENCIES vtkAddon)
 
+message(STATUS "vtkAddon_SOURCE_DIR = ${vtkAddon_SOURCE_DIR}")
 set(vtkAddon_CMAKE_DIR ${vtkAddon_SOURCE_DIR}/CMake)
 mark_as_superbuild(vtkAddon_CMAKE_DIR:PATH)
 
@@ -232,6 +233,7 @@ Slicer_Remote_Add(MultiVolumeExplorer
   LABELS REMOTE_MODULE
   )
 list_conditional_append(Slicer_BUILD_MultiVolumeExplorer Slicer_REMOTE_DEPENDENCIES MultiVolumeExplorer)
+message(STATUS "MultiVolumeExplorer_SOURCE_DIR = ${MultiVolumeExplorer_SOURCE_DIR}")
 
 Slicer_Remote_Add(MultiVolumeImporter
   GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/fedorov/MultiVolumeImporter.git
@@ -241,6 +243,7 @@ Slicer_Remote_Add(MultiVolumeImporter
   LABELS REMOTE_MODULE
   )
 list_conditional_append(Slicer_BUILD_MultiVolumeImporter Slicer_REMOTE_DEPENDENCIES MultiVolumeImporter)
+message(STATUS "MultiVolumeImporter_SOURCE_DIR = ${MultiVolumeImporter_SOURCE_DIR}")
 
 Slicer_Remote_Add(SimpleFilters
   GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/SimpleITK/SlicerSimpleFilters.git
@@ -250,6 +253,7 @@ Slicer_Remote_Add(SimpleFilters
   LABELS REMOTE_MODULE
   )
 list_conditional_append(Slicer_BUILD_SimpleFilters Slicer_REMOTE_DEPENDENCIES SimpleFilters)
+message(STATUS "SimpleFilters_SOURCE_DIR = ${SimpleFilters_SOURCE_DIR}")
 
 
 # BRAINSTools_hidden_options are internal options needed for BRAINSTools that should be hidden

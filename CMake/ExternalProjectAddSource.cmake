@@ -71,7 +71,8 @@ function(ExternalProject_Add_Source projectname)
   if(NOT DEFINED ${_ep_SOURCE_DIR_VAR})
 
     if(NOT ${_ep_SOURCE_DIR_VAR})
-      set(${_ep_SOURCE_DIR_VAR} ${CMAKE_BINARY_DIR}/${projectname})
+      # set(${_ep_SOURCE_DIR_VAR} ${CMAKE_BINARY_DIR}/${projectname})
+      set(${_ep_SOURCE_DIR_VAR} ${CMAKE_SOURCE_DIR}/External/${projectname})
     endif()
 
     set(_ep_args_to_pass)
@@ -101,7 +102,9 @@ function(ExternalProject_Add_Source projectname)
       ${_epgpd_args_to_pass}
       )
 
-    set(${_ep_SOURCE_DIR_VAR} ${CMAKE_BINARY_DIR}/${projectname} PARENT_SCOPE)
+    # set(${_ep_SOURCE_DIR_VAR} ${CMAKE_BINARY_DIR}/${projectname} PARENT_SCOPE)
+    set(${_ep_SOURCE_DIR_VAR} ${CMAKE_SOURCE_DIR}/External/${projectname} PARENT_SCOPE)
+    message(STATUS "_ep_SOURCE_DIR_VAR = ${_ep_SOURCE_DIR_VAR}")
 
   else()
 

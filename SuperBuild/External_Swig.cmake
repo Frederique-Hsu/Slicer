@@ -63,7 +63,7 @@ if(NOT SWIG_DIR AND NOT Slicer_USE_SYSTEM_${proj})
     set(BISON_FLAGS "" CACHE STRING "Flags used by bison")
     mark_as_advanced(BISON_FLAGS)
 
-    set(EP_SOURCE_DIR ${CMAKE_BINARY_DIR}/Swig)
+    set(EP_SOURCE_DIR ${CMAKE_SOURCE_DIR}/External/Swig)
     set(EP_BINARY_DIR ${CMAKE_BINARY_DIR}/Swig-build)
     set(EP_INSTALL_DIR ${CMAKE_BINARY_DIR}/Swig-install)
 

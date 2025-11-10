@@ -62,7 +62,7 @@ if((NOT DEFINED CURL_INCLUDE_DIR
     QUIET
     )
 
-  set(EP_SOURCE_DIR ${CMAKE_BINARY_DIR}/${proj})
+  set(EP_SOURCE_DIR ${CMAKE_SOURCE_DIR}/External/${proj})
   set(EP_BINARY_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
   set(EP_INSTALL_DIR ${CMAKE_BINARY_DIR}/${proj}-install)
 

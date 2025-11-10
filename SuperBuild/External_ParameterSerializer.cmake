@@ -29,7 +29,7 @@ if(NOT DEFINED ${proj}_DIR AND NOT Slicer_USE_SYSTEM_${proj})
     QUIET
     )
 
-  set(EP_SOURCE_DIR ${CMAKE_BINARY_DIR}/${proj})
+  set(EP_SOURCE_DIR ${CMAKE_SOURCE_DIR}/External/${proj})
   set(EP_BINARY_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
 
   set(EXTERNAL_PROJECT_OPTIONAL_CMAKE_CACHE_ARGS)

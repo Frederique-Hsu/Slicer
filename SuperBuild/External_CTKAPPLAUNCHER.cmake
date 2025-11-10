@@ -35,7 +35,7 @@ if(Slicer_USE_CTKAPPLAUNCHER)
       set(sha256 "355e39904138921466213330a5f7af127702bc28a8dc9b25115461db0b3546af")
     endif()
 
-    set(EP_BINARY_DIR ${CMAKE_BINARY_DIR}/${proj})
+    set(EP_BINARY_DIR ${CMAKE_SOURCE_DIR}/External/${proj})
 
     set(CTKAppLauncherFileName CTKAppLauncher-${launcher_version}-${CTKAPPLAUNCHER_OS}-${CTKAPPLAUNCHER_ARCHITECTURE}.tar.gz)
     ExternalProject_Add(${proj}

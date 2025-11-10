@@ -50,7 +50,7 @@ if(NOT DEFINED Teem_DIR AND NOT Slicer_USE_SYSTEM_${proj})
     QUIET
     )
 
-  set(EP_SOURCE_DIR ${CMAKE_BINARY_DIR}/${proj})
+  set(EP_SOURCE_DIR ${CMAKE_SOURCE_DIR}/External/${proj})
   set(EP_BINARY_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
 
   ExternalProject_Add(${proj}

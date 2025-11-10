@@ -86,7 +86,7 @@ You could either:
     endif()
 
     #------------------------------------------------------------------------------
-    set(EP_SOURCE_DIR ${CMAKE_BINARY_DIR}/${proj})
+    set(EP_SOURCE_DIR ${CMAKE_SOURCE_DIR}/External/${proj})
 
     include(ExternalProjectForNonCMakeProject)
 

@@ -30,7 +30,7 @@ if(NOT DEFINED CTKResEdit_EXECUTABLE)
   set(url "${url}/v0.1.0-20140331-c157b7c/CTKResEdit-${CTKResEdit_VERSION}-gc157-${CTKResEdit_OS}-${CTKResEdit_ARCHITECTURE}.tar.gz")
   set(md5 "f59547c480420199081b94e96df292ec")
 
-  set(EP_BINARY_DIR ${CMAKE_BINARY_DIR}/${proj})
+  set(EP_BINARY_DIR ${CMAKE_SOURCE_DIR}/External/${proj})
 
   ExternalProject_Add(${proj}
     ${${proj}_EP_ARGS}

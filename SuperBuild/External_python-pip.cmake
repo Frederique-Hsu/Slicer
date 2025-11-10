@@ -34,7 +34,7 @@ if(NOT Slicer_USE_SYSTEM_${proj})
   ExternalProject_Add(${proj}
     ${${proj}_EP_ARGS}
     DOWNLOAD_COMMAND ""
-    SOURCE_DIR ${CMAKE_BINARY_DIR}/${proj}
+    SOURCE_DIR ${CMAKE_SOURCE_DIR}/External/${proj}
     BUILD_IN_SOURCE 1
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""

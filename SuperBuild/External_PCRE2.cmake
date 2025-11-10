@@ -21,7 +21,7 @@ if(NOT Slicer_USE_SYSTEM_${proj})
   #  PCRE (Perl Compatible Regular Expressions)
   #
 
-  set(EP_SOURCE_DIR ${CMAKE_BINARY_DIR}/PCRE2)
+  set(EP_SOURCE_DIR ${CMAKE_SOURCE_DIR}/External/PCRE2)
   set(EP_BINARY_DIR ${CMAKE_BINARY_DIR}/PCRE2-build)
   set(EP_INSTALL_DIR ${CMAKE_BINARY_DIR}/PCRE2-install)
 

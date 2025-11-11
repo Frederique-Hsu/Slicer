@@ -12,7 +12,7 @@
 
 function(slicer_check_cmake_https)
   set(url "https://raw.githubusercontent.com/Slicer/Slicer/main/CMakeLists.txt")
-  set(dest "${CMAKE_CURRENT_BINARY_DIR}/slicer_check_cmake_https_output")
+  set(dest "${CMAKE_CURRENT_SOURCE_DIR}/slicer_check_cmake_https_output")
 
   set(msg "Checking if CMake supports https")
   message(STATUS "${msg}")
@@ -20,7 +20,7 @@ function(slicer_check_cmake_https)
   if(NOT Slicer_CMake_HTTPS_Supported)
     file(DOWNLOAD ${url} ${dest} STATUS status)
     list(GET status 0 error_code)
-    file(REMOVE ${dest})
+    # file(REMOVE ${dest})
     if(error_code)
       list(GET status 1 error_msg)
       #

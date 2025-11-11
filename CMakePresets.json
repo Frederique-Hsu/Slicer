@@ -1,0 +1,32 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 24,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "slicer-dev-linux",
+            "displayName": "3D Slicer Dev on Linux",
+            "description": "Configure 3D Slicer for development on Linux",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "WITH_COVERAGE": "ON",
+                "Slicer_USE_DCMTK_WITH_OPENSSL": "ON",
+                "Slicer_BUILD_PARAMETERSERIALIZER_SUPPORT": "ON",
+                "BUILD_TESTING": "ON",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "slicer-dev-linux-build",
+            "displayName": "Build 3D Slicer on Linux",
+            "configurePreset": "slicer-dev-linux",
+            "jobs": 1
+        }
+    ]
+}

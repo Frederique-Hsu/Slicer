@@ -18,6 +18,16 @@
                 "Slicer_BUILD_PARAMETERSERIALIZER_SUPPORT": "ON",
                 "BUILD_TESTING": "ON",
                 "CMAKE_BUILD_TYPE": "Debug"
+            },
+            "vendor": {
+                "vscode": {
+                    "name": "3D Slicer Unit Test",
+                    "testing": {
+                        "ctest": {
+                            "path": "${sourceDir}/build/Slicer-build"
+                        }
+                    }
+                }
             }
         }
     ],

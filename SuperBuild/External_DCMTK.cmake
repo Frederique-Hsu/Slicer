@@ -75,6 +75,7 @@ if(NOT DEFINED DCMTK_DIR AND NOT Slicer_USE_SYSTEM_${proj})
     )
 
   set(EP_SOURCE_DIR ${CMAKE_SOURCE_DIR}/External/${proj})
+  set(EP_DOWNLOAD_DIR ${CMAKE_SOURCE_DIR}/External/downloads/${proj})
   set(EP_BINARY_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
 
   # If it applies, prepend "CMAKE_ARGS"
@@ -90,6 +91,11 @@ if(NOT DEFINED DCMTK_DIR AND NOT Slicer_USE_SYSTEM_${proj})
     GIT_TAG "${Slicer_${proj}_GIT_TAG}"
     SOURCE_DIR ${EP_SOURCE_DIR}
     BINARY_DIR ${EP_BINARY_DIR}
+    DOWNLOAD_DIR ${EP_DOWNLOAD_DIR}
+    UPDATE_COMMAND  ""
+    PATCH_COMMAND   ""
+    LOG_DOWNLOAD    ON
+    BUILD_ALWAYS    0
     CMAKE_CACHE_ARGS
       -DCMAKE_CXX_COMPILER:FILEPATH=${CMAKE_CXX_COMPILER}
       -DCMAKE_CXX_FLAGS:STRING=${ep_common_cxx_flags}
